@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>袁远航 · 会做内容、会造工具、会看数据的技术型内容运营</title>
-<meta name="description" content="袁远航个人作品集：软件工程 × AI 内容生产管线 × 账号运营，抖音 4076 粉、19.7 万获赞，四条百万播放爆款，自部署语音克隆，数据驱动迭代。">
+<meta name="description" content="袁远航个人作品集：软件工程 × AI 内容生产管线 × 账号运营，抖音 1.2 万粉、26.9 万获赞，5 条爆款 · 4 条百万播放（最高 255.8 万），AI 无人直播单日 1.5 万音浪，自部署语音克隆，数据驱动迭代。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600..900;1,9..144,600..900&family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media=\'all\'">
@@ -78,13 +78,14 @@ h1 .hl::after{content:"";position:absolute;left:0;right:0;bottom:5px;height:11px
 
 /* data band */
 .data-strip{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin-top:64px}
-.data-in{display:grid;grid-template-columns:repeat(3,1fr)}
-.data-cell{padding:24px 26px;border-left:1px solid var(--line)}
+.data-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.data-cell{padding:24px 22px;border-left:1px solid var(--line)}
 .data-cell:first-child{border-left:none}
 .data-cell .tag{font-size:12px;letter-spacing:.24em;font-weight:700;color:var(--pink-deep);margin-bottom:6px}
 .data-cell .num{font-family:var(--serif);font-weight:900;font-size:clamp(24px,2.6vw,34px);line-height:1.2}
 .data-cell .num i{font-style:italic;color:var(--pink-deep)}
 .data-cell .lab{font-size:13px;color:var(--soft);margin-top:4px}
+@media(max-width:960px){.data-in{grid-template-columns:repeat(2,1fr)}.data-cell{border-left:none;border-top:1px solid var(--line)}.data-cell:nth-child(even){border-left:1px solid var(--line)}.data-cell:nth-child(-n+2){border-top:none}}
 @media(max-width:860px){.data-in{grid-template-columns:1fr}.data-cell{border-left:none;border-top:1px solid var(--line)}.data-cell:first-child{border-top:none}}
 
 /* marquee */
@@ -162,8 +163,10 @@ section{padding:92px 0 0}
 .viral-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:26px}
 .v-card{background:var(--card);border:1.5px solid var(--ink);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
 .v-card:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--pink-soft)}
-.v-card .imgbox{height:330px;overflow:hidden;border-bottom:1.5px solid var(--ink);background:var(--cream)}
+.v-card .imgbox{height:330px;overflow:hidden;border-bottom:1.5px solid var(--ink);background:var(--cream);position:relative}
 .v-card .imgbox img{width:100%;height:100%;object-fit:cover;object-position:top}
+.v-card .imgbox .series{position:absolute;top:12px;left:12px;z-index:1;background:var(--ink);color:var(--paper);font-size:12px;font-weight:700;letter-spacing:.05em;padding:5px 12px;border-radius:999px;box-shadow:3px 3px 0 rgba(42,33,25,.18)}
+.v-card .imgbox .series.hot{background:var(--pink)}
 .v-card .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
 .v-card h3{font-family:var(--serif);font-weight:900;font-size:20px}
 .v-card .data{font-family:var(--serif);font-style:italic;font-weight:900;font-size:26px;color:var(--pink-deep);line-height:1.1}
@@ -316,6 +319,14 @@ footer b{color:rgba(250,244,235,.8)}
 .lb p{color:var(--paper);font-size:14px;font-weight:700;text-align:center}
 .lb .gclose{top:20px;right:22px;position:fixed}
 
+.live-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;background:var(--pink-soft);border:1px solid var(--pink);color:var(--pink-deep);border-radius:999px;padding:3px 12px;margin-bottom:10px}
+.live-tag.hot{background:var(--pink);border-color:var(--pink);color:#fff}
+.cold.fresh{background:var(--pink-soft)}
+.fresh-stats{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 16px}
+.fresh-stats .fs{background:#fff;border:1.5px solid var(--pink);border-radius:14px;padding:10px 16px;min-width:104px;box-shadow:3px 3px 0 rgba(231,95,135,.14)}
+.fresh-stats .n{display:block;font-family:var(--serif);font-style:italic;font-weight:900;font-size:22px;color:var(--pink-deep);line-height:1.15}
+.fresh-stats .l{display:block;font-size:12px;color:var(--soft);margin-top:2px}
+
 
 /* 三款小游戏卡片 */
 .cold.games{grid-template-columns:.85fr 1.15fr}
@@ -356,7 +367,7 @@ footer b{color:rgba(250,244,235,.8)}
       <div>
         <p class="eyebrow rv in">PORTFOLIO 2026 · 内容运营 / AI 内容</p>
         <h1 class="rv in" style="--d:.06s">会做内容、会造工具，<br>还会看<span class="hl">数据</span>。</h1>
-        <p class="hero-sub rv in" style="--d:.12s">我是<b>袁远航</b>。软件工程本科，一年企业级全栈开发经验。自己搭了一条完整的 AI 内容生产管线，把账号「一二布布幼稚园」从 0 做到 4076 粉、19.7 万获赞，做出四条百万播放爆款。</p>
+        <p class="hero-sub rv in" style="--d:.12s">我是<b>袁远航</b>。软件工程本科，一年企业级全栈开发经验。自己搭了一条完整的 AI 内容生产管线，把账号「一二布布幼稚园」从 0 做到 1.2 万粉、26.9 万获赞，做出五条爆款、四条百万播放。</p>
         <div class="hero-cta rv in" style="--d:.18s">
           <a class="btn btn-solid" href="#media">看我的账号 ↓</a>
           <a class="btn btn-line" href="#contact">联系我</a>
@@ -364,7 +375,7 @@ footer b{color:rgba(250,244,235,.8)}
       </div>
       <div class="hero-visual rv in" style="--d:.15s">
         <div class="arch"><img decoding="async" src="assets/img-01.webp" width="660" height="944" fetchpriority="high" alt="袁远航个人照片"></div>
-        <div class="sticker s1">4 条百万播放爆款<small>最高单条 200.8 万播放</small></div>
+        <div class="sticker s1">5 条爆款 · 4 条百万播放<small>最高单条 255.8 万播放</small></div>
         <div class="sticker s2">AI 内容生产管线<small>文生图 → 视频 → 语音克隆</small></div>
       </div>
     </div>
@@ -373,8 +384,13 @@ footer b{color:rgba(250,244,235,.8)}
       <div class="data-in">
         <div class="data-cell">
           <div class="tag">账号运营</div>
-          <div class="num">4076 粉 <i>/ 19.7 万获赞</i></div>
-          <div class="lab">抖音 4076 粉 · 小红书 1493 粉，选题到成片全链路独立完成</div>
+          <div class="num">1.2 万粉 <i>/ 26.9 万获赞</i></div>
+          <div class="lab">抖音 1.2 万粉 · 小红书 1551 粉，选题到成片全链路独立完成</div>
+        </div>
+        <div class="data-cell">
+          <div class="tag">AI 直播</div>
+          <div class="num">单日 <i>1.5 万音浪</i></div>
+          <div class="lab">语音克隆驱动的无人直播 · 日均开播 13 小时 · 观众 2.5 万</div>
         </div>
         <div class="data-cell">
           <div class="tag">AI 管线</div>
@@ -412,7 +428,7 @@ footer b{color:rgba(250,244,235,.8)}
       <div class="step rv in">
         <span class="layer">内容层</span>
         <h3>账号运营 · 从 0 到 1 做出账号</h3>
-        <p>「一二布布幼稚园」从 0 做起，4076 粉、19.7 万获赞，四条百万播放爆款。选题、脚本、画面生成、剪辑，全链路独立完成。</p>
+        <p>「一二布布幼稚园」从 0 做起，1.2 万粉、26.9 万获赞，五条爆款、四条百万播放。选题、脚本、画面生成、剪辑，全链路独立完成。</p>
       </div>
       <div class="step rv in" style="--d:.08s">
         <span class="layer">AI 层</span>
@@ -440,26 +456,26 @@ footer b{color:rgba(250,244,235,.8)}
       <span class="s-no">02</span>
       <div><p class="s-en">MEDIA · THE ACCOUNT</p><h2>账号运营｜一二布布幼稚园</h2></div>
       <span class="s-line"></span>
-      <p class="s-note">从 0 到 4076 粉，每一步都有数据背书。</p>
+      <p class="s-note">从 0 到 1.2 万粉，每一步都有数据背书。</p>
     </div>
 
     <div class="cold rv in">
       <div class="txt">
         <h3>先说这个账号是什么</h3>
         <p>「一二布布幼稚园」是一个二维 IP 账号，主角是一二和布布，主打 <b>AI 漫画 + 短视频</b>，在抖音和小红书双平台更新。</p>
-        <p>抖音 <b>4076 粉丝、19.7 万获赞</b>，小红书 <b>1493 粉丝、3.1 万获赞与收藏</b>。所有内容都走 AI 管线产出，从选题、脚本、画面生成到剪辑，全链路由我独立完成。</p>
-        <div class="chips"><span>抖音 4076 粉</span><span>19.7 万获赞</span><span>小红书 1493 粉 · 3.1 万赞藏</span><span>AI 漫画短视频</span><span>双平台更新</span></div>
+        <p>抖音 <b>1.2 万粉丝、26.9 万获赞</b>，小红书 <b>1551 粉丝、3.3 万获赞与收藏</b>。所有内容都走 AI 管线产出，从选题、脚本、画面生成到剪辑，全链路由我独立完成。</p>
+        <div class="chips"><span>抖音 1.2 万粉</span><span>26.9 万获赞</span><span>小红书 1551 粉 · 3.3 万赞藏</span><span>AI 漫画短视频</span><span>双平台更新</span></div>
       </div>
       <div class="phones">
-        <div class="phone tl"><img src="assets/img-02.webp" loading="lazy" decoding="async" alt="抖音账号主页：19.7万获赞 4076粉丝"></div>
-        <div class="phone tr"><img src="assets/img-03.webp" loading="lazy" decoding="async" alt="小红书账号主页：1493粉丝 3.1万获赞与收藏"></div>
+        <div class="phone tl"><img src="assets/img-18.webp" width="900" height="2000" loading="lazy" decoding="async" alt="抖音账号主页：26.9万获赞 1.2万粉丝"></div>
+        <div class="phone tr"><img src="assets/img-03.webp" loading="lazy" decoding="async" alt="小红书账号主页：1551粉丝 3.3万获赞与收藏"></div>
       </div>
     </div>
 
     <div class="cold rv in">
       <div class="txt">
-        <h3>四条百万播放爆款</h3>
-        <p>账号最硬的四张牌，全是<b>百万级播放</b>。每一条都不是运气：钩子怎么埋、情绪怎么走、评论区怎么引，都是有设计的。</p>
+        <h3>五条爆款，四条百万播放</h3>
+        <p>账号最硬的五张牌，四条<b>百万级播放</b>，其中「收拾」系列连出两条。每一条都不是运气：钩子怎么埋、情绪怎么走、评论区怎么引，都是有设计的。</p>
       </div>
     </div>
 
@@ -467,6 +483,15 @@ footer b{color:rgba(250,244,235,.8)}
       <button class="v-arrow prev" aria-label="上一条爆款">←</button>
       <button class="v-arrow next" aria-label="下一条爆款">→</button>
       <div class="viral-track">
+      <article class="v-card rv in" style="--d:.16s">
+        <div class="imgbox"><span class="series">收拾系列 ①</span><img src="assets/img-20.webp" width="900" height="2000" loading="lazy" decoding="async" alt="「当男熊友被我收拾了一顿后」作品截图：布布趴在床上委屈哼唧，255.8万浏览"></div>
+        <div class="body">
+          <h3>当男熊友被我收拾了一顿后</h3>
+          <div class="data">255.8 万<small>播放 ｜ 抖音点赞 6.0 万 · 收藏 7230 · 评论 2934</small></div>
+          <p class="desc">一二把男熊友“收拾”了一顿，布布趴在床上一脸委屈，嘴上还“哼唧”。情侣间的小别扭谁都经历过，评论区很快变成“同款男友”故事会。</p>
+          <div class="formula"><b>共鸣场景 + 角色反差 + 评论区晒经历</b></div>
+        </div>
+      </article>
       <article class="v-card lead rv in">
         <div class="imgbox"><img src="assets/img-04.webp" loading="lazy" decoding="async" alt="灯神系列作品截图：布布擦亮捡来的神灯"></div>
         <div class="body">
@@ -485,24 +510,35 @@ footer b{color:rgba(250,244,235,.8)}
           <div class="formula"><b>冲突前置 + 金钱梗 + 社交货币</b> — 聊天截图形态高沉浸</div>
         </div>
       </article>
-      <article class="v-card rv in" style="--d:.16s">
-        <div class="imgbox"><img src="assets/img-06.webp" loading="lazy" decoding="async" alt="「当男熊友被我收拾了一顿后」作品截图：布布趴在床上委屈哼唧"></div>
-        <div class="body">
-          <h3>当男熊友被我收拾了一顿后</h3>
-          <div class="data">185 万<small>播放 ｜ 抖音点赞 4 万</small></div>
-          <p class="desc">一二把男熊友“收拾”了一顿，布布趴在床上一脸委屈，嘴上还“哼唧”。情侣间的小别扭谁都经历过，评论区很快变成“同款男友”故事会。</p>
-          <div class="formula"><b>共鸣场景 + 角色反差 + 评论区晒经历</b></div>
-        </div>
-      </article>
       <article class="v-card rv in" style="--d:.24s">
         <div class="imgbox"><img src="assets/img-07.webp" loading="lazy" decoding="async" alt="情侣IP大集合作品截图：四大顶流情侣IP"></div>
         <div class="body">
           <h3>情侣IP 大集合</h3>
-          <div class="data">148.5 万<small>播放 ｜ 抖音点赞 2.6 万</small></div>
+          <div class="data">168.0 万<small>播放 ｜ 抖音点赞 2.8 万+</small></div>
           <p class="desc">把当时最火的四对情侣IP——<b>线条小狗、蜜桃灰灰、噜噜噜妹、一二布布</b>——放一屏，问“你是哪个流派？”评论区立刻站队、拉人、吵起来。</p>
           <div class="formula"><b>抛问题引互动</b> — 让用户站队，评论自己长出来</div>
         </div>
       </article>
+      </div>
+    </div>
+
+    <div class="cold fresh rv in">
+      <div class="txt">
+        <span class="live-tag hot">发布不到一天 · 还在长</span>
+        <h3>当女熊友被我收拾了一顿后 — 收拾系列 ②</h3>
+        <p>男版爆完，立刻用同一条管线产出这条<b>角色反转篇</b>：被“收拾”的换成女熊友，同样的结构、场景和音效，只换主角和情绪。从剧本到成片一天出片——验证的不是运气，是<b>路径可复制</b>。</p>
+        <p>发布不到一天，播放已经冲到 92.4 万、点赞 2 万，还在涨。同一套公式跑通两次，「收拾」系列就是这条产线交出的第二个爆款。</p>
+        <div class="fresh-stats">
+          <div class="fs"><span class="n">92.4 万</span><span class="l">播放 · 不到一天</span></div>
+          <div class="fs"><span class="n">2.0 万</span><span class="l">点赞</span></div>
+          <div class="fs"><span class="n">2893</span><span class="l">收藏</span></div>
+          <div class="fs"><span class="n">1020</span><span class="l">评论</span></div>
+        </div>
+        <div class="formula"><b>同路径复制</b> — 管线产能 × 选题复用：爆款不是运气，是产线能力</div>
+        <div class="chips"><span>角色反转</span><span>系列化选题</span><span>一天出片</span><span>评论区晒经历</span></div>
+      </div>
+      <div class="phones">
+        <div class="phone tl"><img src="assets/img-21.webp" width="900" height="2000" loading="lazy" decoding="async" alt="「当女熊友被我收拾了一顿后」作品截图：女熊友趴在床上，发布不到一天92.4万浏览"></div>
       </div>
     </div>
 
@@ -518,20 +554,20 @@ footer b{color:rgba(250,244,235,.8)}
       </div>
     </div>
 
-    <div class="cold rv in">
+      <div class="cold rv in">
       <div class="txt">
         <h3>后台数据，比我会说话</h3>
-        <p>我不挑好看的说。这是抖音后台交出来的周报：近 7 天播放 39.6 万，<b>超过同类作者 99.75%</b>。</p>
+        <p>我不挑好看的说。这是抖音后台交出来的周报：近 7 天播放 57.9 万，<b>超过同类作者 99.9%</b>。</p>
         <div class="stats">
-          <div class="stat"><span class="k">完播率</span><span class="me">42.09%</span><span class="vs">同类作者 16.6%</span></div>
-          <div class="stat"><span class="k">互动率</span><span class="me">8.9%</span><span class="vs">同类作者 4.9%</span></div>
-          <div class="stat"><span class="k">粉丝净增</span><span class="me">191</span><span class="vs">同类作者 3</span></div>
-          <div class="stat"><span class="k">点赞量</span><span class="me">1 万</span><span class="vs">周环比 +492%</span></div>
+          <div class="stat"><span class="k">完播率</span><span class="me">34.3%</span><span class="vs">同类作者 16.7%</span></div>
+          <div class="stat"><span class="k">互动率</span><span class="me">5.3%</span><span class="vs">同类作者 5.1%</span></div>
+          <div class="stat"><span class="k">粉丝净增</span><span class="me">3756</span><span class="vs">同类作者 2</span></div>
+          <div class="stat"><span class="k">点赞量</span><span class="me">1.2 万</span><span class="vs">周环比 +37.4%</span></div>
         </div>
         <p>翻译一下：大家不只是点进来，是真的看完、会聊、会关注。这是做内容最值钱的部分。</p>
       </div>
       <div class="phones">
-        <div class="phone tl"><img src="assets/img-09.webp" loading="lazy" decoding="async" alt="抖音数据中心后台：近7日播放39.6万，超过同类作者99.75%"></div>
+        <div class="phone tl"><img src="assets/img-19.webp" width="900" height="2000" loading="lazy" decoding="async" alt="抖音数据中心后台：近7日播放57.9万，超过同类作者99.9%"></div>
       </div>
     </div>
 
@@ -574,6 +610,19 @@ footer b{color:rgba(250,244,235,.8)}
       </div>
       <div class="phones">
         <div class="phone tl"><img src="assets/img-11.webp" loading="lazy" decoding="async" alt="一二布布AI语音合成 PC 端界面"></div>
+      </div>
+    </div>
+
+    <div class="cold rv in">
+      <div class="txt">
+        <h3>生产线不停，直播间也在跑</h3>
+        <p>管线里的语音克隆 worker 不只给视频配音，还支撑着账号的 <b>AI 无人直播</b>：布布和一二在抖音自己开播，欢迎、互动、点歌、礼物答谢一套规则跑通后，日均开播 13 小时，真人去睡觉，直播间还在。</p>
+        <p>10 月 31 日首播至今，<b>单日最高 1.5 万音浪、观众 2.5 万、新增粉丝 314</b>。管线搭好之后，直播间就是生产线上的又一个产物——技术是底座，跑出来的是运营结果。</p>
+        <div class="chips"><span>AI 无人直播</span><span>日均开播 13 小时</span><span>单日 1.5 万音浪</span><span>观众 2.5 万 / 新增粉 314</span><span>首播 2026.10.31</span></div>
+      </div>
+      <div class="phones">
+        <div class="phone tl"><img src="assets/img-22.webp" width="900" height="2000" loading="lazy" decoding="async" alt="抖音主播中心后台：单日收获音浪1.5万、观众2.5万、新增粉丝314"></div>
+        <div class="phone tr"><img src="assets/img-23.webp" width="900" height="2000" loading="lazy" decoding="async" alt="抖音主播中心后台：单场开播515分钟、收获音浪5103、新增粉丝83"></div>
       </div>
     </div>
   </div>
